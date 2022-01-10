@@ -24,7 +24,7 @@ class AdobeSign extends AbstractProvider
     /**
      * @var string
      */
-    protected $dataCenter = 'secure.na1';
+    protected $dataCenter = 'api.eu2';
 
     /**
      * AdobeSign constructor.
@@ -53,7 +53,7 @@ class AdobeSign extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return "https://$this->dataCenter.echosign.com/public/oauth";
+        return "https://$this->dataCenter.adobesign.com/public/oauth/v2";
     }
 
     /**
@@ -66,7 +66,7 @@ class AdobeSign extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return "https://$this->dataCenter.echosign.com/oauth/token";
+        return "https://$this->dataCenter.adobesign.com/oauth/v2/token";
     }
 
     /**
@@ -78,7 +78,7 @@ class AdobeSign extends AbstractProvider
      */
     public function getBaseRefreshTokenUrl()
     {
-        return "https://$this->dataCenter.echosign.com/oauth/refresh";
+        return "https://$this->dataCenter.adobesign.com/oauth/v2/refresh";
     }
 
     /**
@@ -90,7 +90,7 @@ class AdobeSign extends AbstractProvider
      */
     public function getBaseRevokeTokenUrl()
     {
-        return "https://$this->dataCenter.echosign.com/oauth/revoke";
+        return "https://$this->dataCenter.adobesign.com/oauth/v2/revoke";
     }
 
     /**
